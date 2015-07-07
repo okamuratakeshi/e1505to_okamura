@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require "e1505to_okamura"
+
+if ARGV.size != 2
+   STDERR.print "Usage: ruby#{$0} price shipping_date(YYYYMMDD)\n"
+   exit
+end
+#puts "PRICE:" + ARGV[0]
+#puts "SHIPPING DATE:" + ARGV[1]
+price = ARGV[0].to_i
+date = ARGV[1].to_i
+puts E1505toOkamura.new_method(price,date)
