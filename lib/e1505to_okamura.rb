@@ -3,7 +3,12 @@ require "bigdecimal"
 
 module E1505toOkamura
   # Your code goes here...
-  def self.new_method(price,date)
+	print 'Please set price(without tax) : '
+    price = gets.chomp.to_i
+
+	print 'Please set sales_date : '
+    date = gets.chomp.to_i
+
     #日付を元に消費税率を設定
     if date < 19890401 then
       taxrt = BigDecimal("1.00")
@@ -17,7 +22,12 @@ module E1505toOkamura
       taxrt = BigDecimal("1.10")
     end
     #価格＊（１＋税率）
-    print ( (BigDecimal( price ) * taxrt).floor )
-    puts " (taxin)"
-  end
+    
+    price_wt = ( (BigDecimal( price ) * taxrt).floor )
+    
+    print "Price with tax is "
+    print price_wt
+    print " at "
+    print date
+    puts  "."
 end
