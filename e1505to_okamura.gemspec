@@ -5,7 +5,7 @@ require 'e1505to_okamura/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "e1505to_VATcalc"
-  spec.version       = E1505toOkamura::VERSION
+  spec.version       = "0.2.0"
   spec.authors       = ["Okamura Takeshi"]
   spec.email         = ["tkc.okamura80@gmail.com"]
 
